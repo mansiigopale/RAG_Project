@@ -88,13 +88,3 @@ at another folder), then re-run `python main.py index`.
   trade-off in an interview.
 - Log latency + grounding scores over time to spot regressions.
 
-## 6. How to talk about this on your resume / in interviews
-
-- "Built a RAG pipeline using document chunking, embeddings, and FAISS for
-  context retrieval" → you can explain *why* each stage exists (see
-  section 1), not just that you used the tools.
-- "Added response validation to check answer grounding, flag unsupported
-  outputs, and track latency" → be ready to explain the cosine-similarity
-  grounding method, its threshold, and its known limitation (it's a
-  semantic-similarity proxy, not true entailment) — and what you'd improve
-  with more time (NLI-based grounding).
