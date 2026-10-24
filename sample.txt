@@ -1,0 +1,32 @@
+Retrieval-Augmented Generation (RAG) Overview
+
+RAG systems combine a retrieval step with a generation step. Instead of
+relying only on what a language model learned during training, the system
+first retrieves relevant passages from an external knowledge base, then
+gives those passages to the model as context when generating an answer.
+
+Why RAG matters: language models have a fixed training cutoff and cannot
+know about documents they were never shown. RAG lets a model answer
+questions about private documents, recent data, or domain-specific
+knowledge without retraining the model itself.
+
+A typical RAG pipeline has four stages: document chunking, embedding,
+retrieval, and generation. Chunking splits long documents into smaller
+pieces so each piece can be embedded and retrieved independently.
+Embedding converts text into numerical vectors that capture meaning.
+Retrieval finds the chunks most relevant to a query using vector
+similarity search. Generation feeds the retrieved chunks to a language
+model along with the user's question to produce a final answer.
+
+A common failure mode in RAG systems is hallucination: the model
+generates an answer that sounds plausible but is not actually supported
+by the retrieved context. Automated validation steps, such as checking
+whether each sentence of the answer is semantically similar to some part
+of the retrieved context, can catch this failure mode without requiring
+a human reviewer for every response.
+
+Latency is another practical concern in production RAG systems. Retrieval
+is usually fast because vector search is optimized for speed, but
+generation with a large language model is often the slowest stage of the
+pipeline. Measuring the time spent in each stage separately helps
+engineers identify where to optimize.
