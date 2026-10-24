@@ -149,4 +149,4 @@ The grounding threshold is a starting value, not a proven one. It should be adju
 
 **Manasi Gopale**
 M.Tech Data Science, NIT Jalandhar
-[GitHub](https://github.com/mansiigopale) · [LinkedIn](https://linkedin.com/in/mansi-gopale-0926732ba/)
+[GitHub](https://github.com/mansiigopale) · [LinkedIn](https://www.linkedin.com/in/manasigopale/)
